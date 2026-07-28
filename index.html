@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臺灣的山椒魚 - 閱讀理解四層次互動測驗</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f4f7f6;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #printable-certificate, #printable-certificate * {
+                visibility: visible;
+            }
+            #printable-certificate {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                margin: 0;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-800 min-h-screen flex flex-col">
+
+    <!-- 頂部標題列 -->
+    <header class="bg-emerald-700 text-white shadow-md sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid font-bold text-2xl text-emerald-300">🦎</i>
+                <h1 class="text-xl sm:text-2xl font-bold tracking-wide">臺灣的山椒魚 閱讀測驗</h1>
+            </div>
+            <div id="top-score-badge" class="hidden bg-emerald-800/80 backdrop-blur border border-emerald-500/30 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium">
+                目前得分：<span id="current-score-text" class="text-amber-300 font-bold text-base">0</span> / 100
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        
+        <!-- 雙欄版面：左側文章，右側測驗 -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            
+            <!-- 左欄：文章閱讀區 -->
+            <section class="lg:col-span-5 bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden lg:sticky lg:top-20">
+                <div class="bg-emerald-50 border-b border-emerald-100 px-5 py-4 flex justify-between items-center">
+                    <h2 class="font-bold text-emerald-900 text-lg flex items-center gap-2">
+                        <i class="fa-solid fa-book-open text-emerald-600"></i> 閱讀文本
+                    </h2>
+                    <span class="text-xs bg-emerald-200/60 text-emerald-800 px-2.5 py-1 rounded-md font-medium">請仔細對照內文</span>
+                </div>
+                
+                <div class="p-5 max-h-[65vh] lg:max-h-[75vh] overflow-y-auto custom-scrollbar leading-relaxed text-slate-700 space-y-4 text-base">
+                    <h3 class="text-xl font-bold text-center text-slate-900 border-b pb-2 border-slate-100">臺灣的山椒魚</h3>
+                    
+                    <p class="indent-6">你知道在氣候溫暖的臺灣，也有冰河時期的動物嗎？就讓我們一起來認識牠吧！</p>
+                    
+                    <h4 class="font-bold text-emerald-800 text-lg mt-3">山椒魚不是魚</h4>
+                    <p class="indent-6">山椒魚可不是魚，牠們是兩生類的動物，因為身上有著特別的山椒味，所以大家叫牠「山椒魚」。</p>
+                    <p class="indent-6">山椒魚小時候很像魚，是用鰓呼吸，長大以後才改用肺呼吸。別看山椒魚小小的，牠們身上的黏液有毒，可以保護自己。遇到敵人的時候，牠們會抬起尾巴，讓對方不敢接近。</p>
+                    
+                    <h4 class="font-bold text-emerald-800 text-lg mt-3">石縫裡的偶遇</h4>
+                    <p class="indent-6">山椒魚白天喜歡躲在石縫裡休息，晚上才出來找東西吃。現在，如果你想要看一看牠們的真面目，得先爬上兩千公尺的高山。在溪流邊，或是森林底層的落葉裡，翻一翻，找一找，說不定就能和牠們相遇。</p>
+                    <p class="indent-6">山椒魚不怕冷，冬天的時候特別活躍。山椒魚媽媽會在這個時候產卵，山椒魚爸爸也會留下來，一起照顧牠們的寶寶。</p>
+                    
+                    <h4 class="font-bold text-emerald-800 text-lg mt-3">山椒魚的大危機</h4>
+                    <p class="indent-6">因為山椒魚的存在，讓我們知道氣候溫和的臺灣，也經歷過冰河時期，真是令人難以想像！</p>
+                    <p class="indent-6">臺灣的山椒魚原本就不多，近年來森林又受到人類的破壞，再加上地球暖化，牠們能居住的地方也越來越少，眼看快要消失了。希望大家好好想一想，我們可以為山椒魚做些什麼，讓牠們能在美麗的臺灣，平平安安的長大，快快樂樂的生活。</p>
+                </div>
+            </section>
+
+            <!-- 右欄：互動測驗區 -->
+            <section class="lg:col-span-7 space-y-6">
+                
+                <!-- 測驗進行卡片 -->
+                <div id="quiz-card" class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    
+                    <!-- 進度與層次標籤 -->
+                    <div class="bg-slate-50 border-b border-slate-200 px-6 py-4 flex flex-wrap justify-between items-center gap-2">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-md text-white bg-slate-700" id="question-number-badge">
+                                第 1 / 10 題
+                            </span>
+                            <span id="level-tag" class="text-xs font-bold px-2.5 py-1 rounded-md bg-sky-100 text-sky-800 border border-sky-200">
+                                層次：直接提取
+                            </span>
+                        </div>
+                        <div class="text-xs font-semibold text-slate-500">
+                            每題 10 分，共 100 分
+                        </div>
+                    </div>
+
+                    <!-- 進度條 -->
+                    <div class="w-full bg-slate-100 h-1.5">
+                        <div id="progress-bar" class="bg-emerald-500 h-1.5 transition-all duration-300" style="width: 10%"></div>
+                    </div>
+
+                    <!-- 題目與選項區域 -->
+                    <div class="p-6">
+                        <h3 id="question-text" class="text-lg sm:text-xl font-bold text-slate-900 leading-snug mb-6">
+                            題目載入中...
+                        </h3>
+
+                        <div id="options-container" class="space-y-3">
+                            <!-- 選項將由 JS 動態生成 -->
+                        </div>
+
+                        <!-- 答案解析區（預設隱藏） -->
+                        <div id="explanation-box" class="hidden mt-6 p-4 rounded-xl border bg-slate-50 text-sm space-y-2">
+                            <div id="feedback-status" class="font-bold flex items-center gap-2 text-base"></div>
+                            <p id="explanation-text" class="text-slate-700 leading-relaxed"></p>
+                        </div>
+
+                        <!-- 操作按鈕 -->
+                        <div class="mt-8 flex justify-end">
+                            <button id="next-btn" onclick="handleNextQuestion()" disabled class="px-6 py-2.5 rounded-xl bg-slate-300 text-slate-500 cursor-not-allowed font-medium transition-all duration-200 flex items-center gap-2 shadow-sm">
+                                <span>下一步</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 測驗結果卡片（初始隱藏） -->
+                <div id="result-card" class="hidden bg-white rounded-2xl shadow-md border border-slate-200 p-6 sm:p-8 text-center space-y-6">
+                    <div class="inline-flex items-center justify-center w-20 h-20 bg-amber-100 rounded-full text-amber-500 mb-2">
+                        <i class="fa-solid fa-trophy text-4xl"></i>
+                    </div>
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900">恭喜完成《臺灣的山椒魚》閱讀測驗！</h2>
+                        <p class="text-slate-600 mt-1">以下是你的學習表現統計：</p>
+                    </div>
+
+                    <!-- 得分看板 -->
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 max-w-sm mx-auto">
+                        <div class="text-sm font-semibold text-emerald-800">最終得分</div>
+                        <div id="final-score" class="text-5xl font-black text-emerald-600 my-2">0</div>
+                        <div id="performance-comment" class="text-xs font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full inline-block">
+                            評價計算中...
+                        </div>
+                    </div>
+
+                    <!-- 四層次分析 -->
+                    <div class="text-left bg-slate-50 rounded-xl p-4 border border-slate-200 text-sm space-y-3">
+                        <h4 class="font-bold text-slate-800 border-b border-slate-200 pb-2">閱讀理解能力分析：</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                            <div class="flex justify-between items-center bg-white p-2.5 rounded-lg border">
+                                <span>📍 直接提取 (3題)</span>
+                                <span id="stat-level-1" class="font-bold text-emerald-600">0/3</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-white p-2.5 rounded-lg border">
+                                <span>💡 間接提取 (3題)</span>
+                                <span id="stat-level-2" class="font-bold text-emerald-600">0/3</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-white p-2.5 rounded-lg border">
+                                <span>🧩 詮釋整合 (2題)</span>
+                                <span id="stat-level-3" class="font-bold text-emerald-600">0/2</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-white p-2.5 rounded-lg border">
+                                <span>🔍 比較評估 (2題)</span>
+                                <span id="stat-level-4" class="font-bold text-emerald-600">0/2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 輸入姓名頒發證書 -->
+                    <div class="pt-4 border-t border-slate-200 space-y-4">
+                        <h3 class="font-bold text-slate-800">領取閱讀理解榮譽證書</h3>
+                        <div class="flex flex-col sm:flex-row gap-3 justify-center items-center max-w-md mx-auto">
+                            <input type="text" id="student-name-input" placeholder="請輸入你的姓名" class="w-full sm:w-2/3 px-4 py-2.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 outline-none transition text-center sm:text-left">
+                            <button onclick="generateCertificate()" class="w-full sm:w-1/3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-xl transition shadow-md flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-award"></i> 生成證書
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center gap-4">
+                        <button onclick="restartQuiz()" class="text-sm text-slate-500 hover:text-emerald-600 underline font-medium">
+                            重新測驗
+                        </button>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- 可列印證書 Modal / 區塊 -->
+    <div id="certificate-modal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-6 sm:p-10 relative my-8 border-4 border-amber-400">
+            
+            <button onclick="closeCertificateModal()" class="no-print absolute top-4 right-4 text-slate-400 hover:text-slate-600 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <!-- 證書內容主體 -->
+            <div id="printable-certificate" class="text-center space-y-6 p-6 border-2 border-amber-200 bg-amber-50/30 rounded-xl relative">
+                
+                <!-- 裝飾角標 -->
+                <div class="absolute top-2 left-2 text-amber-400 text-2xl">✨</div>
+                <div class="absolute top-2 right-2 text-amber-400 text-2xl">✨</div>
+
+                <div class="space-y-2">
+                    <div class="text-xs font-bold text-amber-700 tracking-widest uppercase">Reading Comprehension Certificate</div>
+                    <h2 class="text-3xl font-black text-slate-800 tracking-wide">閱讀理解榮譽證書</h2>
+                </div>
+
+                <p class="text-slate-600">茲證明</p>
+                
+                <div id="cert-student-name" class="text-2xl sm:text-3xl font-extrabold text-emerald-800 border-b-2 border-emerald-600 inline-block px-8 py-1">
+                    學習者
+                </div>
+
+                <p class="text-slate-700 leading-relaxed text-sm sm:text-base max-w-lg mx-auto">
+                    完成文章<strong class="text-emerald-900">《臺灣的山椒魚》</strong>之閱讀理解四層次測驗，展現優異的閱讀理解能力與自然生態關懷意識。
+                </p>
+
+                <!-- 成績徽章 -->
+                <div class="flex justify-center items-center gap-6 my-4">
+                    <div class="bg-white border border-amber-300 rounded-xl px-4 py-2 shadow-sm">
+                        <span class="text-xs text-slate-500 block">總得分</span>
+                        <span id="cert-score" class="text-2xl font-black text-emerald-600">100</span>
+                        <span class="text-xs font-bold text-emerald-600">分</span>
+                    </div>
+                    <div class="bg-white border border-amber-300 rounded-xl px-4 py-2 shadow-sm">
+                        <span class="text-xs text-slate-500 block">評定等級</span>
+                        <span id="cert-grade" class="text-lg font-bold text-amber-600">卓越級</span>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-end pt-6 border-t border-amber-200 text-xs text-slate-500">
+                    <div class="text-left">
+                        <p>發證日期：<span id="cert-date">2026-07-22</span></p>
+                        <p>領域：自然與人文閱讀</p>
+                    </div>
+                    <div class="text-right">
+                        <div class="font-bold text-slate-700 text-sm mb-1">臺灣山椒魚學習推廣會</div>
+                        <p>閱讀理解認證章</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 操作按鈕 -->
+            <div class="no-print mt-6 flex flex-wrap justify-end gap-3">
+                <button onclick="closeCertificateModal()" class="px-5 py-2 rounded-xl border border-slate-300 text-slate-600 hover:bg-slate-50 font-medium text-sm">
+                    關閉
+                </button>
+                <button onclick="window.print()" class="px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow-md flex items-center gap-2">
+                    <i class="fa-solid fa-print"></i> 列印 / 下載證書 PDF
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 閱讀理解四層次題庫（總計10題：直接3、間接3、詮釋整合2、比較評估2）
+        const quizData = [
+            // 第一層：直接提取 (3題)
+            {
+                id: 1,
+                level: "直接提取",
+                levelCode: 1,
+                question: "1. 山椒魚之所以被大家稱為「山椒魚」，主要原因是什麼？",
+                options: [
+                    "牠們生活在種植山椒樹的高山上",
+                    "牠們身上散發著特別的山椒味",
+                    "牠們最喜歡吃山椒做成的食物",
+                    "牠們的外表長得很像山椒的果實"
+                ],
+                correct: 1,
+                explanation: "【直接提取】文章第一段明確提到：「因為身上有著特別的山椒味，所以大家叫牠『山椒魚』。」"
+            },
+            {
+                id: 2,
+                level: "直接提取",
+                levelCode: 1,
+                question: "2. 當山椒魚遇到敵人的時候，會採取什麼動作來保護自己？",
+                options: [
+                    "大聲叫喊嚇跑敵人",
+                    "快速鑽進水裡躲起來",
+                    "抬起尾巴讓對方不敢接近",
+                    "捲縮成一顆球滾下山"
+                ],
+                correct: 2,
+                explanation: "【直接提取】文章第二段明確提到：「遇到敵人的時候，牠們會抬起尾巴，讓對方不敢接近。」"
+            },
+            {
+                id: 3,
+                level: "直接提取",
+                levelCode: 1,
+                question: "3. 如果現在想要在臺灣觀察到山椒魚的真面目，通常需要爬到多高的山上？",
+                options: [
+                    "五百公尺的高山",
+                    "一千公尺的高山",
+                    "兩千公尺的高山",
+                    "四千公尺的高山"
+                ],
+                correct: 2,
+                explanation: "【直接提取】文章第三段明確提到：「如果你想要看一看牠們的真面目，得先爬上兩千公尺的高山。」"
+            },
+
+            // 第二層：間接提取 / 推論分析 (3題)
+            {
+                id: 4,
+                level: "間接提取",
+                levelCode: 2,
+                question: "4. 根據文章對山椒魚呼吸器官轉變與幼體特徵的描述，山椒魚屬於哪一類動物？",
+                options: [
+                    "魚類",
+                    "兩生類",
+                    "爬蟲類",
+                    "哺乳類"
+                ],
+                correct: 1,
+                explanation: "【間接提取】文章指出「山椒魚可不是魚，牠們是兩生類的動物」，並補充小時候用鰓呼吸、長大改用肺呼吸，這正是兩生類的典型特徵。"
+            },
+            {
+                id: 5,
+                level: "間接提取",
+                levelCode: 2,
+                question: "5. 山椒魚在冬天特別活躍，甚至選在冬天產卵，這可以推論出山椒魚具備什麼樣的生活習性？",
+                options: [
+                    "山椒魚非常害怕炎熱，具有喜好寒冷環境的特性",
+                    "山椒魚冬天不需要睡覺，夏天則會進行長時間冬眠",
+                    "冬天溪流裡的其他食物比較多",
+                    "冬天時高山上的敵人全都凍死了"
+                ],
+                correct: 0,
+                explanation: "【間接提取】文中提及山椒魚是冰河時期留下來的動物且「不怕冷，冬天的時候特別活躍」，可推論其具有適應寒冷、偏好低溫環境的生態習性。"
+            },
+            {
+                id: 6,
+                level: "間接提取",
+                levelCode: 2,
+                question: "6. 文章提及山椒魚爸爸在產卵後的行為，展現了什麼樣的繁殖照顧模式？",
+                options: [
+                    "產卵後父母便會立即離開尋找新棲地",
+                    "由山椒魚爸爸獨自孵卵與撫育幼體",
+                    "山椒魚爸爸會留下來與媽媽共同照顧寶寶",
+                    "由山椒魚媽媽獨自承擔照顧責任"
+                ],
+                correct: 2,
+                explanation: "【間接提取】文章第四段指出：「山椒魚媽媽會在這個時候產卵，山椒魚爸爸也會留下來，一起照顧牠們的寶寶。」說明雙親共同照顧。"
+            },
+
+            // 第三層：詮釋整合 (2題)
+            {
+                id: 7,
+                level: "詮釋整合",
+                levelCode: 3,
+                question: "7. 文章提到「因為山椒魚的存在，讓我們知道氣候溫和的臺灣，也經歷過冰河時期」。這句話在全文中表達什麼核心概念？",
+                options: [
+                    "山椒魚是生物演化上的活化石，證實了臺灣過去的地理氣候變遷歷史",
+                    "山椒魚能製造冰塊讓周遭環境溫度下降",
+                    "臺灣未來的氣候會再次回到冰河時期",
+                    "山椒魚是從極地被人類帶到臺灣養殖的"
+                ],
+                correct: 0,
+                explanation: "【詮釋整合】整合首段與尾段意涵，山椒魚作為冰河時期遺留下來的孑遺生物，其棲息存在成為臺灣地質歷史上曾有極冷冰河氣候的重要自然證物。"
+            },
+            {
+                id: 8,
+                level: "詮釋整合",
+                levelCode: 3,
+                question: "8. 綜合全文，造成臺灣山椒魚目前面臨「大危機」的主要原因，**不包含**下列哪一項？",
+                options: [
+                    "人類活動導致森林棲地遭受破壞",
+                    "全球暖化導致適合生存的冷涼環境減少",
+                    "山椒魚本身數量原本就不多",
+                    "山椒魚身上的黏液毒性太強毒死同類"
+                ],
+                correct: 3,
+                explanation: "【詮釋整合】歸納最後一段可知，生存危機的原因為：原本數量不多、森林受人類破壞、地球暖化。黏液有毒是保護自己的機制，非導致危機的原因。"
+            },
+
+            // 第四層：比較評估 (2題)
+            {
+                id: 9,
+                level: "比較評估",
+                levelCode: 4,
+                question: "9. 作者在文章結尾提出：「希望大家好好想一想，我們可以為山椒魚做些什麼」，這主要是為了達成什麼寫作目的？",
+                options: [
+                    "號召讀者發起捕捉山椒魚回家當寵物的行動",
+                    "引發讀者的省思，喚起對臺灣野生動物與生態環境保護的責任感",
+                    "要求政府立刻給予山椒魚高額的金錢補助",
+                    "說明山椒魚是一種對人類有經濟價值的食材"
+                ],
+                correct: 1,
+                explanation: "【比較評估】評估作者的寫作意圖與結尾呼籲，目的是從知識傳遞提升到態度改變，引導讀者思考並落實環境保育行動。"
+            },
+            {
+                id: 10,
+                level: "比較評估",
+                levelCode: 4,
+                question: "10. 評估這篇文章的結構與語言風格，下列哪一項敘述最為恰當？",
+                options: [
+                    "採用艱深的學術論文格式，充滿難懂的生物學專有名詞",
+                    "以新聞報導方式，客觀記錄山椒魚研究學者的一天",
+                    "使用親切淺顯的標題與語氣，層層遞進地介紹山椒魚的名稱、習性與保育危機，非常適合大眾閱讀",
+                    "以神話故事的手法，虛構山椒魚拯救臺灣森林的情節"
+                ],
+                correct: 2,
+                explanation: "【比較評估】評估文章寫作風格，全文分標題寫作、語氣親切（如：你知道嗎、就讓我們...），且結構順暢（簡介->特徵與習性->歷史與危機呼籲），適合兒童與大眾科普閱讀。"
+            }
+        ];
+
+        // 狀態變數
+        let currentIdx = 0;
+        let selectedOption = null;
+        let score = 0;
+        let userAnswers = new Array(quizData.length).fill(null);
+        let levelScores = { 1: 0, 2: 0, 3: 0, 4: 0 };
+
+        window.onload = function() {
+            renderQuestion();
+        };
+
+        function renderQuestion() {
+            const q = quizData[currentIdx];
+            
+            // 更新題目進度與層次標籤
+            document.getElementById("question-number-badge").innerText = `第 ${currentIdx + 1} / ${quizData.length} 題`;
+            
+            const levelTag = document.getElementById("level-tag");
+            levelTag.innerText = `層次：${q.level}`;
+            
+            // 根據層次更換標籤顏色
+            if (q.levelCode === 1) levelTag.className = "text-xs font-bold px-2.5 py-1 rounded-md bg-blue-100 text-blue-800 border border-blue-200";
+            else if (q.levelCode === 2) levelTag.className = "text-xs font-bold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200";
+            else if (q.levelCode === 3) levelTag.className = "text-xs font-bold px-2.5 py-1 rounded-md bg-purple-100 text-purple-800 border border-purple-200";
+            else levelTag.className = "text-xs font-bold px-2.5 py-1 rounded-md bg-amber-100 text-amber-800 border border-amber-200";
+
+            // 進度條
+            const progress = ((currentIdx + 1) / quizData.length) * 100;
+            document.getElementById("progress-bar").style.width = `${progress}%`;
+
+            // 題目內容
+            document.getElementById("question-text").innerText = q.question;
+
+            // 重置選項容器
+            const container = document.getElementById("options-container");
+            container.innerHTML = "";
+            selectedOption = null;
+
+            // 隱藏解析盒
+            document.getElementById("explanation-box").className = "hidden mt-6 p-4 rounded-xl border bg-slate-50 text-sm space-y-2";
+
+            // 重置按鈕
+            const nextBtn = document.getElementById("next-btn");
+            nextBtn.disabled = true;
+            nextBtn.className = "px-6 py-2.5 rounded-xl bg-slate-300 text-slate-500 cursor-not-allowed font-medium transition-all duration-200 flex items-center gap-2 shadow-sm";
+            nextBtn.querySelector("span").innerText = currentIdx === quizData.length - 1 ? "查看成果" : "下一步";
+
+            // 生成選項
+            q.options.forEach((opt, index) => {
+                const btn = document.createElement("button");
+                btn.className = "w-full text-left p-4 rounded-xl border-2 border-slate-200 hover:border-emerald-400 hover:bg-emerald-50/50 transition-all duration-150 flex items-start gap-3 group focus:outline-none";
+                btn.onclick = () => selectOption(index);
+                
+                const optionLabel = Array.isArray(['A','B','C','D']) ? ['A','B','C','D'][index] : index;
+                
+                btn.innerHTML = `
+                    <span class="w-6 h-6 rounded-full bg-slate-100 border border-slate-300 text-slate-600 font-bold text-xs flex items-center justify-center flex-shrink-0 group-hover:border-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition-colors" id="opt-icon-${index}">
+                        ${optionLabel}
+                    </span>
+                    <span class="text-slate-700 font-medium text-sm sm:text-base leading-snug pt-0.5">${opt}</span>
+                `;
+                container.appendChild(btn);
+            });
+        }
+
+        function selectOption(index) {
+            if (userAnswers[currentIdx] !== null) return; // 已作答則不能更改
+
+            const q = quizData[currentIdx];
+            selectedOption = index;
+            userAnswers[currentIdx] = index;
+
+            const isCorrect = (index === q.correct);
+            
+            // 計算得分
+            if (isCorrect) {
+                score += 10;
+                levelScores[q.levelCode] += 1;
+                document.getElementById("current-score-text").innerText = score;
+            }
+
+            // 更新選項UI樣式
+            const optionsBtns = document.getElementById("options-container").children;
+            
+            for (let i = 0; i < optionsBtns.length; i++) {
+                optionsBtns[i].disabled = true; // 禁用按鈕
+                optionsBtns[i].classList.remove("hover:border-emerald-400", "hover:bg-emerald-50/50");
+
+                if (i === q.correct) {
+                    // 正確答案標綠色
+                    optionsBtns[i].className = "w-full text-left p-4 rounded-xl border-2 border-emerald-500 bg-emerald-50 text-emerald-900 flex items-start gap-3 font-medium";
+                    document.getElementById(`opt-icon-${i}`).className = "w-6 h-6 rounded-full bg-emerald-600 text-white font-bold text-xs flex items-center justify-center flex-shrink-0";
+                    document.getElementById(`opt-icon-${i}`).innerHTML = "<i class='fa-solid fa-check'></i>";
+                } else if (i === index && !isCorrect) {
+                    // 選錯標紅色
+                    optionsBtns[i].className = "w-full text-left p-4 rounded-xl border-2 border-rose-500 bg-rose-50 text-rose-900 flex items-start gap-3 font-medium";
+                    document.getElementById(`opt-icon-${i}`).className = "w-6 h-6 rounded-full bg-rose-600 text-white font-bold text-xs flex items-center justify-center flex-shrink-0";
+                    document.getElementById(`opt-icon-${i}`).innerHTML = "<i class='fa-solid fa-xmark'></i>";
+                } else {
+                    optionsBtns[i].classList.add("opacity-50");
+                }
+            }
+
+            // 顯示解析盒
+            const expBox = document.getElementById("explanation-box");
+            const feedbackStatus = document.getElementById("feedback-status");
+            const expText = document.getElementById("explanation-text");
+
+            expBox.classList.remove("hidden");
+            if (isCorrect) {
+                expBox.classList.add("border-emerald-200", "bg-emerald-50/70");
+                feedbackStatus.className = "font-bold flex items-center gap-2 text-base text-emerald-700";
+                feedbackStatus.innerHTML = "<i class='fa-solid fa-circle-check'></i> 回答正確！ (+10分)";
+            } else {
+                expBox.classList.add("border-rose-200", "bg-rose-50/70");
+                feedbackStatus.className = "font-bold flex items-center gap-2 text-base text-rose-700";
+                feedbackStatus.innerHTML = `<i class='fa-solid fa-circle-xmark'></i> 回答錯誤！正確答案是 (${['A','B','C','D'][q.correct]})`;
+            }
+
+            expText.innerText = q.explanation;
+
+            // 啟用下一題按鈕
+            const nextBtn = document.getElementById("next-btn");
+            nextBtn.disabled = false;
+            nextBtn.className = "px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition-all duration-200 flex items-center gap-2 shadow-md hover:shadow-lg cursor-pointer";
+        }
+
+        function handleNextQuestion() {
+            if (currentIdx < quizData.length - 1) {
+                currentIdx++;
+                renderQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById("quiz-card").classList.add("hidden");
+            document.getElementById("result-card").classList.remove("hidden");
+
+            // 顯示頂部總得分標籤
+            document.getElementById("top-score-badge").classList.remove("hidden");
+
+            // 設定最終得分
+            document.getElementById("final-score").innerText = score;
+
+            // 設定評語
+            const comment = document.getElementById("performance-comment");
+            if (score === 100) {
+                comment.innerText = "🌟 閱讀大師！完全掌握文章精髓！";
+                comment.className = "text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-full inline-block";
+            } else if (score >= 80) {
+                comment.innerText = "👍 非常優秀！具備良好的閱讀理解力！";
+                comment.className = "text-xs font-bold text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full inline-block";
+            } else if (score >= 60) {
+                comment.innerText = "😊 表現不錯！建議再次細讀文本會更棒！";
+                comment.className = "text-xs font-bold text-sky-800 bg-sky-100 px-3 py-1 rounded-full inline-block";
+            } else {
+                comment.innerText = "💪 再接再厲！重新閱讀文章再試一次吧！";
+                comment.className = "text-xs font-bold text-rose-800 bg-rose-100 px-3 py-1 rounded-full inline-block";
+            }
+
+            // 更新四層次得分統計
+            document.getElementById("stat-level-1").innerText = `${levelScores[1]}/3 題`;
+            document.getElementById("stat-level-2").innerText = `${levelScores[2]}/3 題`;
+            document.getElementById("stat-level-3").innerText = `${levelScores[3]}/2 題`;
+            document.getElementById("stat-level-4").innerText = `${levelScores[4]}/2 題`;
+        }
+
+        function generateCertificate() {
+            const nameInput = document.getElementById("student-name-input").value.trim();
+            const name = nameInput || "優秀學習者";
+
+            document.getElementById("cert-student-name").innerText = name;
+            document.getElementById("cert-score").innerText = score;
+
+            // 評定等級
+            let grade = "參賽證明";
+            if (score === 100) grade = "🏆 特優 (閱讀大師)";
+            else if (score >= 80) grade = "🥇 優等 (閱讀達人)";
+            else if (score >= 60) grade = "🥈 甲等 (閱讀好手)";
+            else grade = "🥉 努力賞";
+            
+            document.getElementById("cert-grade").innerText = grade;
+
+            // 日期
+            const today = new Date();
+            const dateStr = `${today.getFullYear()} 年 ${today.getMonth() + 1} 月 ${today.getDate()} 日`;
+            document.getElementById("cert-date").innerText = dateStr;
+
+            // 顯示 Modal
+            document.getElementById("certificate-modal").classList.remove("hidden");
+        }
+
+        function closeCertificateModal() {
+            document.getElementById("certificate-modal").classList.add("hidden");
+        }
+
+        function restartQuiz() {
+            currentIdx = 0;
+            score = 0;
+            userAnswers = new Array(quizData.length).fill(null);
+            levelScores = { 1: 0, 2: 0, 3: 0, 4: 0 };
+            
+            document.getElementById("current-score-text").innerText = "0";
+            document.getElementById("result-card").classList.add("hidden");
+            document.getElementById("quiz-card").classList.remove("hidden");
+            
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>
